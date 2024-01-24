@@ -40,7 +40,7 @@ public abstract class AbstractGioco extends AbstractEventi implements Runnable{
     private void tira(Pedina p) { //il giocatore tira i dadi e in base alle regole scelte e alla posizione della pedina può avviarsi il tiro singolo
         int val;
         if ((regole.isLancioSingolo() &&
-                (p.getPos().getY()*scacchiera.getCoordinate().getY()+p.getPos().getX())>
+                (p.getPos().getY()*scacchiera.getCoordinate().getX()+p.getPos().getX())>
                         (scacchiera.getCoordinate().getY()*scacchiera.getCoordinate().getX())-7)){
             val=tiraSingolo();
         }
